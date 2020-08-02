@@ -26,9 +26,10 @@ docker run -d -p 9080:8080 -p 443:8081 \
  mcr.microsoft.com/azure-api-management/gateway:latest
 
 docker run \
-      --log-driver local --log-opt max-size=10m \
-      -v /mnt/d/MyGitHub/Azure-APIM-Self-Hosted-Gateway/dockers-logs/log-driver/local/docker-gw/docker-echo:/etc/docker/ \
-      alpine echo hello world
+ --log-driver local \
+ --log-opt max-size=10m \
+ -v /mnt/d/MyGitHub/Azure-APIM-Self-Hosted-Gateway/dockers-logs/log-driver/local/docker-gw/docker-echo:/etc/docker/ \
+ alpine echo hello world
 
 ```
 
