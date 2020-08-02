@@ -60,5 +60,7 @@ docker run \
  --log-opt fluentd-address=localhost:24224 \
  mcr.microsoft.com/azure-api-management/gateway:latest
 
-
 ```
+
+# Linux Log file monitoring in System Center Operations Manager
+https://docs.microsoft.com/en-us/system-center/scom/manage-linux-logfiles?view=sc-om-2019
