@@ -8,7 +8,7 @@ https://docs.docker.com/config/containers/logging/configure/
 https://docs.docker.com/config/containers/logging/local/
 
 
-```
+```bash
 # log-driver=local
 
 docker run \
@@ -33,7 +33,7 @@ docker run \
 
 ```
 
-```
+```bash
 docker inspect --format='{{.LogPath}}' container_id
 docker inspect --format='{{.LogPath}}' 6335bcb8ff61
 ```
@@ -41,7 +41,7 @@ docker inspect --format='{{.LogPath}}' 6335bcb8ff61
 # Docker Fluentd Logging Driver
 https://docs.fluentd.org/container-deployment/docker-logging-driver
 
-```
+```bash
 # log-driver=fluentd
 
 docker run -it -p 24224:24224 \
