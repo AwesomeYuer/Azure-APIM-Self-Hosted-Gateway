@@ -18,7 +18,12 @@ docker run \
  -v /mnt/d/MyGitHub/Azure-APIM-Self-Hosted-Gateway/dockers-logs/log-driver/local/docker-gw:/etc/docker/ \
  mcr.microsoft.com/azure-api-management/gateway:latest
 
-docker run -d -p 9080:8080 -p 443:8081 --name gw-01 --env-file env.ggz.conf --log-driver local --log-opt max-size=10m -v /home/user/dockers-logs/docker-gw:/etc/docker/ mcr.microsoft.com/azure-api-management/gateway:latest
+docker run -d -p 9080:8080 -p 443:8081 \
+ --name gw-01 --env-file env.ggz.conf \
+ --log-driver local \
+ --log-opt max-size=10m \
+ -v /home/user/dockers-logs/docker-gw:/etc/docker/ \
+ mcr.microsoft.com/azure-api-management/gateway:latest
 
 docker run \
       --log-driver local --log-opt max-size=10m \
@@ -27,11 +32,9 @@ docker run \
 
 ```
 
-
 ```
 docker inspect --format='{{.LogPath}}' container_id
 docker inspect --format='{{.LogPath}}' 6335bcb8ff61
-
 ```
 
 # Docker Fluentd Logging Driver
